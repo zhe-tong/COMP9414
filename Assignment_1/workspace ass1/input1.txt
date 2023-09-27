@@ -1,0 +1,20 @@
+# four unconstrained tasks that are all before a final task
+task wall1 14
+task wall2 14
+task wall3 3
+task wall4 13
+task wall5 15
+task wall6 4
+task roof 20
+# binary constraints
+constraint wall1 before roof
+constraint wall2 before roof
+constraint wall3 before roof
+constraint wall4 before roof
+constraint wall5 before roof
+constraint wall6 before roof
+constraint wall2 ends wall3
+constraint wall6 overlaps wall5
+# domain constraints
+domain wall1 starts-after 6
+domain roof starts-after 13
